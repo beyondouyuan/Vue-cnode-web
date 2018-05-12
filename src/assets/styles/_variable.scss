@@ -1,0 +1,23 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-04-21 11:53:46
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-04-21 15:52:00
+*/
+@charset "utf-8";
+$width: 1150px;
+$sidebarWidth: 290px;
+$boxTopColor: #F6F6F6;
+$fontSize: 1rem;
+@mixin prefix($name,$value){
+    #{$name}:$value;
+    -webkit-#{$name}:$value;
+}
+
+@mixin display($value) {
+    display: #{$value};
+    display:-webkit-#{$value};
+}
+@mixin user-select() {
+    @include prefix(user-select, none);
+}

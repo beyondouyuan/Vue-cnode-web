@@ -1,113 +1,145 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
-  </div>
+  <footer class="footer" v-pre>
+    <div class="footer-wrapper">
+      <div class="source-code-add">
+        <a href="https://beyondouyuan.github.io" target="_blank" rel="noopener noreferrer">源码</a>
+      </div>
+      <div class="vendor">
+        <ul>
+          <li class="item">
+            <span>感谢Cnode社区提供API</span>
+            <a href="https://condejs.org" target="_blank" rel="noopener noreferrer">
+              <img src="https://cnodejs.org/public/images/cnodejs.svg" alt="cnode" />
+            </a>
+          </li>
+          <li class="item">
+            <span>github</span>
+            <a href="https://beyondouyuan.github.io" target="_blank" rel="noopener noreferrer">
+              <img src="https://cnodejs.org/public/images/cnodejs.svg" alt="cnode" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </template>
 
+
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  export default {
+    name: 'Footer'
   }
-}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang="scss">
+  @import '../../assets/styles/_variable.scss';
+  .footer {
+    padding: 25px 0 35px 0;
+    // 解决浮动布局高度坍塌
+    overflow: hidden;
+    background-color: #FFFFFF;
+
+    .footer-wrapper {
+      width: $width;
+      margin: 0 auto;
+    }
+
+    .source-code-add {
+
+      a:hover {
+        text-decoration: underline;
+        color: #333333
+      }
+    }
+
+    .vendor {
+
+      li {
+        float: left;
+        margin: 15px 30px 0 0
+      }
+
+      span {
+        margin-right: 10px;
+        color: #666666
+      }
+
+      .item {
+
+        img {
+          width: 100px;
+          @include user-select;
+        }
+      }
+    }
+  }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
